@@ -1,0 +1,26 @@
+def matriks_masukan():
+    m = int(input("Jumlah baris: "))
+    n = int(input("Jumlah kolom: "))
+    matriks = []
+    for i in range(m):
+        row = []
+        for j in range(n):
+            elemen = int(input(f"Elemen [{i}][{j}]: "))
+            row.append(elemen)
+        matriks.append(row)
+    return matriks
+
+def transpose_matriks_masukan(matriks):
+    m = len(matriks)
+    n = len(matriks[0])
+    transpose = []
+    for j in range(n):
+        row = []
+        for i in range(m):
+            row.append(matriks[i][j])
+        transpose.append(row)
+    return transpose
+
+matriks = matriks_masukan()
+transpose_matriks = transpose_matriks_masukan(matriks)
+print("Transpose matriks:", transpose_matriks)

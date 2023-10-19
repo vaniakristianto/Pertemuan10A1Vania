@@ -1,0 +1,28 @@
+def matriks_masukan(baris, kolom):
+    matriks = []
+    for i in range(baris):
+        matriks_1 = []
+        for j in range(kolom):
+            elemen = int(input(f"Elemen [{i}][{j}]: "))
+            matriks_1.append(elemen)
+        matriks.append(matriks_1)
+        print(matriks_1)
+    return matriks
+
+def penjumlahan(matriks1, matriks2):
+    hasil = []
+    for i in range(len(matriks1)):
+        matriks_1 = []
+        for j in range(len(matriks1[0])):
+            matriks_1.append(matriks1[i][j] + matriks2[i][j])
+        hasil.append(matriks_1)
+    return hasil
+
+baris = int(input("Jumlah baris: "))
+kolom = int(input("Jumlah kolom: "))
+print("Matriks pertama:")
+matriks1 = matriks_masukan(baris, kolom)
+print("Matriks kedua:")
+matriks2 = matriks_masukan(baris, kolom)
+hasil_matriks = penjumlahan(matriks1, matriks2)
+print("Hasil penjumlahan matriks:", hasil_matriks)
